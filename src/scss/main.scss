@@ -1,0 +1,11 @@
+// Стили плигинов ----------
+
+// fix
+#landing-header .section-block {
+  width: 100vw;
+}
+
+@import '_index';
+@import '_instapage';
+
+@import './store/api/static/css/versions.css';
