@@ -70,26 +70,20 @@ a.bs-btn {
 }
 
 #app__installation-help-text {
-  display: none;
+  /*display: none;*/
   background-color: #d4edda;
   margin-top: -20px;
   padding: 8px 15px;
   text-align: center;
 }
 
-.app__setting_up_alert__wrapper {
-  margin-top: -20px;
-  height: 117px;
-  position: relative;
-}
-
 #app__setting_up_alert {
-  position: absolute;
   display: flex;
   background-color: #261758;
   color: white;
   padding: 38px 15px;
   text-align: left;
+  margin-top: -20px;
 }
 
 .app__setting_up_alert__left {
@@ -101,13 +95,14 @@ a.bs-btn {
   margin-top: 14px;
 }
 
+.app__setting_up_alert__left a {
+  color: #FCB400;
+  text-decoration: underline;
+}
+
 .app__setting_up_alert__title {
   color: #FCB400;
   font-weight: bold;
-  transition: .4s ease all;
-}
-
-.app__setting_up_alert__descr {
   transition: .4s ease all;
 }
 
@@ -124,68 +119,7 @@ a.bs-btn {
   height: 25px;
 }
 
-.app__setting_up_alert__ico_info > svg > circle,
-.app__setting_up_alert__ico_info > svg > path {
-  transition: .4s ease-out all;
-}
-
-.app__setting_up_alert__arrow > svg {
-  width: 25px;
-  height: 10.52px;
-  transition: .2s ease-out all;
-}
-
-.app__setting_up_alert__arrow > svg > path {
-  transition: .4s ease-out all;
-}
-
-.app__setting_up_alert__spoiler {
-  opacity: 0;
-  overflow: hidden;
-  max-height: 0;
-  transition: .4s ease-out all;
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__spoiler {
-  max-height: 800px;
-  opacity: 1;
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__title {
-  margin-left: 25px;
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__descr {
-  color: #FCB400;
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__ico_info > svg > circle {
-  stroke: #FCB400;
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__ico_info > svg > path {
-  fill: #FCB400;
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__arrow > svg {
-  transform: rotate(180deg);
-}
-
-.app__setting_up_alert_isOpen .app__setting_up_alert__arrow > svg > path {
-  stroke: #FCB400;
-}
-
-@media screen and (max-width: 767px) {
-  .app__setting_up_alert__wrapper {
-    height: 159px;
-  }
-}
-
 @media screen and (max-width: 400px) {
-  .app__setting_up_alert__wrapper {
-    height: 40vw;
-  }
-
   #app__setting_up_alert {
     padding: 8.05vw 15px;
   }
@@ -203,40 +137,6 @@ a.bs-btn {
     height: 5.67vw;
   }
 
-  .app__setting_up_alert__arrow > svg {
-    width: 5.67vw;
-    height: 2.38vw;
-  }
-}
-
-#app__unavailable_alert {
-  margin-top: -20px;
-  background-color: #261758;
-  color: white;
-  padding: 38px 15px;
-  text-align: left;
-}
-
-#app__unavailable_alert p {
-  margin-top: 14px;
-}
-
-#app__unavailable_alert a {
-  text-decoration: underline;
-}
-
-.app__unavailable_alert__title {
-  color: #FCB400;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 400px) {
-  #app__unavailable_alert {
-    padding: 8.05vw 15px;
-  }
-  #app__unavailable_alert p {
-    margin-top: 3.5vw;
-  }
 }
 
 #app__version-title {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts</title>
+</head>
+<body>
+<!-- aplications.html-->
+<div style="padding-top: 20px">
+  <!--    Success alert-->
+  <div id="app__installation-help-text">
+    <span style="font-weight: bold;">Fab! Your app is installing!</span>
+    <br>
+    <span>You can see the status on your home screen.</span>
+  </div>
+  <!-- device.status == '1M' or device.status == '1P' or device.status == 'PR'  -->
+
+  <div id="app__setting_up_alert">
+    <div class="app__setting_up_alert__left">
+      <span class="app__setting_up_alert__title">Setting up your account</span>
+      <p>Apple's new policies temporarily disabled your device's ability to download apps via any sideloading services.</p>
+      <p>Unfortunately, we cannot influence or speed up this process. <a href="">Contact us</a> to get a compensation for the time spent waiting or a discount that can be applied at your spare device right away.</p>
+    </div>
+    <div class="app__setting_up_alert__right">
+      <div class="app__setting_up_alert__ico_info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+          <circle cx="9.36507" cy="9.07717" r="8.07717" stroke="#57458F" stroke-width="2"/>
+          <path d="M8.2879 8C8.2879 7.44772 8.73562 7 9.2879 7C9.84019 7 10.2879 7.44771 10.2879 8L10.2879 13C10.2879 13.5523 9.8402 14 9.28791 14C8.73563 14 8.28791 13.5523 8.28791 13L8.2879 8Z" fill="#57458F"/>
+          <path d="M10.2879 5C10.2879 5.55228 9.84019 6 9.2879 6C8.73562 6 8.2879 5.55228 8.2879 5C8.2879 4.44772 8.73562 4 9.2879 4C9.84019 4 10.2879 4.44772 10.2879 5Z" fill="#57458F"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- device.status == '1B' or device.status == '1Z' or device.status == 'IN' -->
+  <div style="background-color: #e96250; margin-top: -20px; padding: 8px 15px; text-align: center;">
+    <span style="font-weight: bold;">Service is temporary unavailable</span>
+    <br>
+    <span>Unfortunately your device usage is temporary unavailable due to Apple new policies, please <a
+      href="https://builds.io/support/tickets/new/" target="_blank">reach out to us</a> to get compensation.</span>
+  </div>
+</div>
+</body>
+</html>

@@ -9,8 +9,11 @@ const PATHS = {
   assets: 'assets/'
 };
 
-const PAGES_DIR = path.resolve(__dirname, 'src/pug');
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
+const PAGES_PUG_DIR = path.resolve(__dirname, 'src/pug');
+const PAGES_PUG = fs.readdirSync(PAGES_PUG_DIR).filter(fileName => fileName.endsWith('.pug'));
+
+const PAGES_HTML_DIR = path.resolve(__dirname, 'src/html');
+const PAGES_HTML = fs.readdirSync(PAGES_HTML_DIR).filter(fileName => fileName.endsWith('.html'));
 
 const devServer = (isDev) => !isDev ? {} : {
   devServer: {
@@ -34,13 +37,18 @@ module.exports = ({develop}) => ({
     clean: true,
   },
   plugins: [
-    // ...PAGES.map(page => new HtmlWebpackPlugin({
-    //   template: `${PAGES_DIR}/${page}`,
-    //   filename: `./${page.replace(/\.pug/,'.html')}`
-    // })),
-    new HtmlWebpackPlugin({
-        template: './src/index.html'
-    }),
+    ...PAGES_PUG.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_PUG_DIR}/${page}`,
+      filename: `./pug/${page.replace(/\.pug/,'.html')}`
+    })),
+    ...PAGES_HTML.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_HTML_DIR}/${page}`,
+      filename: `./${page}`
+    })),
+
+    // new HtmlWebpackPlugin({
+    //     template: './src/index.html'
+    // }),
     new MiniCssExtractPlugin({
         filename: './scss/main.css'
     })
