@@ -70,7 +70,7 @@ a.bs-btn {
 }
 
 #app__installation-help-text {
-  /*display: none;*/
+  display: none;
   background-color: #d4edda;
   margin-top: -20px;
   padding: 8px 15px;
