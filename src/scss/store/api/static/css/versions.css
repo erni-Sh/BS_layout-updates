@@ -1,158 +1,164 @@
 body {
-  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  color: #252525;
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #252525;
 }
 
 .app__version-link {
-  cursor: pointer;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
+    cursor: pointer;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .app__version-link:hover, .app__version-link:focus, .app__version-link:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a.bs-btn {
-  align-items: center;
-  border-radius: 4px;
-  display: flex;
-  font-size: 12px;
-  font-weight: 600;
-  justify-content: center;
-  padding: 8px 10px;
-  text-transform: uppercase;
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 8px 10px;
+    text-transform: uppercase;
 }
 
 #app__versions-modal__title {
-  color: #333333;
-  font-size: 24px;
-  line-height: 30px;
-  margin-left: 10px;
+    color: #333333;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 10px;
 }
 
 #app__versions-modal-content {
-  padding: 15px;
+    padding: 15px;
 }
 
 #app__versions-modal-content > div {
-  border-bottom: 1px solid #EFEFEF;
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 10px;
+    border-bottom: 1px solid #EFEFEF;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
 }
 
 .app__version-list-item {
-  border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
 }
 
 .app__version-list-item__created {
-  color: #565656;
-  font-size: 14px;
-  line-height: 18px;
+    color: #565656;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .app__version-list-item__inner {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .app__version-list-item__title {
-  color: #0066FF;
-  font-size: 18px;
-  text-decoration: underline;
+    color: #0066FF;
+    font-size: 18px;
+    text-decoration: underline;
 }
 
 #app__btns-wrapper {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 #app__installation-help-text {
-  display: none;
-  background-color: #d4edda;
-  margin-top: -20px;
-  padding: 8px 15px;
-  text-align: center;
+    display: none;
 }
 
 #app__setting_up_alert {
-  display: flex;
-  background-color: #261758;
-  color: white;
-  padding: 38px 15px;
-  text-align: left;
-  margin-top: -20px;
+    display: flex;
+    background-color: #261758;
+    color: white;
+    padding: 38px 15px;
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+    #app__setting_up_alert {
+        margin-top: 0;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+}
+
+
 .app__setting_up_alert__left {
-  width: 100%;
-  padding-right: 5px;
+    width: 100%;
+    padding-right: 5px;
 }
 
 .app__setting_up_alert__left p {
-  margin-top: 14px;
+    margin-top: 14px;
 }
 
 .app__setting_up_alert__left a {
-  color: #FCB400;
-  text-decoration: underline;
+    color: #FCB400;
+    text-decoration: underline;
 }
 
 .app__setting_up_alert__title {
-  color: #FCB400;
-  font-weight: bold;
-  transition: .4s ease all;
+    color: #FCB400;
+    font-weight: bold;
+    transition: .4s ease all;
 }
 
 .app__setting_up_alert__right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
 }
 
 .app__setting_up_alert__ico_info > svg {
-  width: 25px;
-  height: 25px;
+    width: 25px;
+    height: 25px;
 }
 
 @media screen and (max-width: 400px) {
-  #app__setting_up_alert {
-    padding: 8.05vw 15px;
-  }
+    #app__setting_up_alert {
+        padding: 8.05vw 15px;
+    }
 
-  .app__setting_up_alert__left p {
-    margin-top: 3.5vw;
-  }
+    .app__setting_up_alert__left p {
+        margin-top: 3.5vw;
+    }
 
-  .app__setting_up_alert__right {
-    width: 9vw;
-  }
+    .app__setting_up_alert__right {
+        width: 9vw;
+    }
 
-  .app__setting_up_alert__ico_info > svg {
-    width: 5.67vw;
-    height: 5.67vw;
-  }
+    .app__setting_up_alert__ico_info > svg {
+        width: 5.67vw;
+        height: 5.67vw;
+    }
 
 }
 
 #app__version-title {
-  color: #565656;
-  margin-bottom: 16px;
-  margin-top: 16px;
+    color: #565656;
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 #app__versions-btn {
-  border: 1px solid #F9B400;
-  color: #F9B400;
-  display: inline-block;
+    border: 1px solid #F9B400;
+    color: #F9B400;
+    display: inline-block;
 }
 
 #app__version-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

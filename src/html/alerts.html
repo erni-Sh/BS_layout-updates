@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- aplications.html-->
-<div style="padding-top: 20px">
+<div style="padding-top: 20px" class="container">
   <!--    Success alert-->
   <div id="app__installation-help-text">
     <span style="font-weight: bold;">Fab! Your app is installing!</span>
@@ -19,9 +19,12 @@
 
   <div id="app__setting_up_alert">
     <div class="app__setting_up_alert__left">
-      <span class="app__setting_up_alert__title">Setting up your account</span>
-      <p>Apple's new policies temporarily disabled your device's ability to download apps via any sideloading services.</p>
-      <p>Unfortunately, we cannot influence or speed up this process. <a href="">Contact us</a> to get a compensation for the time spent waiting or a discount that can be applied at your spare device right away.</p>
+      <span class="app__setting_up_alert__title">Oh,&nbsp;snap!</span>
+      <p>Apple&rsquo;s new policies temporarily disabled your device&rsquo;s ability to&nbsp;download apps via any sideloading services.</p>
+
+      <p><a href="https://help.builds.io/support/solutions/articles/9000221516-what-is-ineligible-and-how-to-deal-with-it-" target="_blank">This article</a> will help you clarify what&rsquo;s going&nbsp;on.</p>
+
+      <p>Unfortunately, we&nbsp;cannot speed up&nbsp;the re-activation process, but we&nbsp;are willing to&nbsp;provide proper compensation for your waiting time. Please,&nbsp;<a href="{% url 'new_support_ticket' %}">contact&nbsp;us</a>.</p>
     </div>
     <div class="app__setting_up_alert__right">
       <div class="app__setting_up_alert__ico_info">
@@ -34,12 +37,12 @@
     </div>
   </div>
   <!-- device.status == '1B' or device.status == '1Z' or device.status == 'IN' -->
-  <div style="background-color: #e96250; margin-top: -20px; padding: 8px 15px; text-align: center;">
-    <span style="font-weight: bold;">Service is temporary unavailable</span>
-    <br>
-    <span>Unfortunately your device usage is temporary unavailable due to Apple new policies, please <a
-      href="https://builds.io/support/tickets/new/" target="_blank">reach out to us</a> to get compensation.</span>
-  </div>
+<!--  <div style="background-color: #e96250; margin-top: -20px; padding: 8px 15px; text-align: center;">-->
+<!--    <span style="font-weight: bold;">Service is temporary unavailable</span>-->
+<!--    <br>-->
+<!--    <span>Unfortunately your device usage is temporary unavailable due to Apple new policies, please <a-->
+<!--      href="https://builds.io/support/tickets/new/" target="_blank">reach out to us</a> to get compensation.</span>-->
+<!--  </div>-->
 </div>
 </body>
 </html>

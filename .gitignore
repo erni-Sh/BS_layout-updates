@@ -142,5 +142,6 @@ dist
 .svelte-kit
 
 .idea
-
+.DS_Store
+materials
 # End of https://www.toptal.com/developers/gitignore/api/node

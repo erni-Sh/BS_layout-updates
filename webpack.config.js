@@ -34,6 +34,7 @@ module.exports = ({develop}) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
     clean: true,
   },
   plugins: [
@@ -55,14 +56,22 @@ module.exports = ({develop}) => ({
   ],
   module: {
       rules: [
+          // {
+          //   test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
+          //   type: 'asset/inline',
+          //   // type: 'asset/resource',
+          // },
           {
-            test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
-            // type: 'asset/inline',
-            type: 'asset/resource',
+            test: /\.(?:ico|png|jpg|jpeg|svg)$/,
+            loader: 'url-loader'
           },
           {
             test: /\.html$/i,
-            loader: 'html-loader'
+            loader: 'html-loader',
+            options: {
+              // Disables attributes processing
+              sources: false,
+            },
           },
           {
             test: /\.css$/i,
