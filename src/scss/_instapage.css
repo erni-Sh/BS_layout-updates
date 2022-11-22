@@ -1261,6 +1261,7 @@ iframe {
         width: 69.44vw;
         bottom: -69px;
         max-width: 1000px;
+        min-width: 780px;
         right: 32%;
     }
 }
