@@ -82,7 +82,19 @@ module.exports = ({develop}) => ({
           {
             test: /\.scss$/i,
             use: [
-              MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+              MiniCssExtractPlugin.loader,
+              {
+                loader: "css-loader",
+                options: {
+                  sourceMap: true,
+                },
+              },
+              {
+                loader: "sass-loader",
+                options: {
+                  sourceMap: true,
+                },
+              },
             ]
           },
           {

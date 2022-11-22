@@ -685,7 +685,7 @@ iframe {
     color: #ffffff;
 }
 
-.helloween_background {
+.landingTop__BG {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -703,27 +703,27 @@ iframe {
     transition: .5s ease-out all;
 }
 
-.helloween_background_visible {
+.landingTop__BG_visible {
     opacity: 1;
     -webkit-animation: slowMovie 5s infinite alternate ease-in-out;
     animation: slowMovie 5s infinite alternate ease-in-out;
 }
 
-.helloween_front {
+.landingTop__front {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 209.375vw;
-    max-width: 1040px;
-    bottom: 0;
-    right: 27%;
+    width: 200vw;
+    max-width: 866px;
+    bottom: 12px;
+    right: 55%;
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
     transform: translateX(50%);
 }
 
-.helloween_front > svg {
+.landingTop__front > svg {
     width: 100%;
     height: 100%;
     -webkit-animation: fromRight forwards .5s ease-out;
@@ -1257,10 +1257,11 @@ iframe {
         color: #ffffff;
     }
 
-    .helloween_front {
-        width: 80.138vw;
-        max-width: 1154px;
-        right: 19%;
+    .landingTop__front {
+        width: 69.44vw;
+        bottom: -69px;
+        max-width: 1000px;
+        right: 32%;
     }
 }
 
