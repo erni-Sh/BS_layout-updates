@@ -19,11 +19,12 @@
 
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 1138px; // 970px;
   }
 }
 
 @import '_index';
 @import '_instapage.css';
+@import '_twitter_banner.css';
 
 @import './store/api/static/css/versions.css';

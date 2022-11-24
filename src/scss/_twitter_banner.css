@@ -1,0 +1,115 @@
+.twitterBanner {
+    display: flex;
+    background: #ECFAFF;
+    width: 100%;
+    min-height: 73px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.twitterBanner__left {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 900;
+    color: #00ACEE;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    padding: 0 35px 0 20px;
+}
+
+.twitterBanner__right {
+    position: relative;
+    /*background: #00ACEE;*/
+    color: white;
+    min-width: 277px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitterBanner__right__text {
+    font-size: 16px;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.twitterBanner__right:before {
+    content: '';
+    position: absolute;
+    background: #00ACEE;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: twitterBannerRightBG .4s linear forwards;
+}
+
+.twitterBanner__icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    left: -22.5px;
+    animation: twitterBannerIcon .8s linear forwards;
+}
+
+@media screen and (max-width: 991px) {
+    .twitterBanner__left span:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 581px) {
+    .twitterBanner {
+        flex-direction: column;
+    }
+    .twitterBanner__left {
+        font-size: 18px;
+        min-height: 57.5px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .twitterBanner__right {
+        min-height: 57.5px;
+    }
+    .twitterBanner__icon {
+        width: 28px;
+        background: none;
+        position: relative;
+        transform: none;
+        left: 0;
+        margin-right: 1em;
+    }
+    .twitterBanner__icon svg path {
+        fill: white;
+    }
+}
+
+@keyframes twitterBannerRightBG {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes twitterBannerIcon {
+    0% {
+        /*opacity: 0;*/
+        transform: rotateY(90deg);
+    }
+    50% {
+        /*opacity: 0;*/
+        transform: rotateY(90deg);
+    }
+    100% {
+        /*opacity: 1;*/
+        transform: rotateY(0);
+    }
+}
