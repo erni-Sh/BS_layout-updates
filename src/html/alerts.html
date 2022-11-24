@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alerts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
 </head>
 <body>
 <!-- aplications.html-->
 <div style="padding-top: 20px">
-  <!--    Success alert-->
-  <div id="app__installation-help-text">
-    <span style="font-weight: bold;">Fab! Your app is installing!</span>
-    <br>
-    <span>You can see the status on your home screen.</span>
-  </div>
-  <!-- device.status == '1M' or device.status == '1P' or device.status == 'PR'  -->
+    <!--    Success alert-->
+    <div id="app__installation-help-text">
+        <span style="font-weight: bold;">Fab! Your app is installing!</span>
+        <br>
+        <span>You can see the status on your home screen.</span>
+    </div>
+    <!-- device.status == '1M' or device.status == '1P' or device.status == 'PR'  -->
 
-  <div id="app__setting_up_alert">
-    <div class="app__setting_up_alert__left">
-      <span class="app__setting_up_alert__title">Setting up your account</span>
-      <p>Please wait until processing is finished. We’ll let you know when your device is activated and ready, so check your email from time to time. In rare cases the onboarding might take up to 72 hours.</p>
+    <div class="app__setting_up_alert">
+        <div class="app__setting_up_alert__left">
+            <span class="app__setting_up_alert__title">Setting up your account</span>
+            <p>Please wait until processing is&nbsp;finished. We&rsquo;ll let you know when your device is&nbsp;activated and ready, so&nbsp;check your email from time to&nbsp;time. In&nbsp;rare cases the onboarding might take up&nbsp;to&nbsp;72&nbsp;hours.</p>
+        </div>
+        <div class="app__setting_up_alert__right">
+            <div class="app__setting_up_alert__ico_info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <circle cx="9.36507" cy="9.07717" r="8.07717" stroke="#57458F" stroke-width="2"/>
+                    <path d="M8.2879 8C8.2879 7.44772 8.73562 7 9.2879 7C9.84019 7 10.2879 7.44771 10.2879 8L10.2879 13C10.2879 13.5523 9.8402 14 9.28791 14C8.73563 14 8.28791 13.5523 8.28791 13L8.2879 8Z" fill="#57458F"/>
+                    <path d="M10.2879 5C10.2879 5.55228 9.84019 6 9.2879 6C8.73562 6 8.2879 5.55228 8.2879 5C8.2879 4.44772 8.73562 4 9.2879 4C9.84019 4 10.2879 4.44772 10.2879 5Z" fill="#57458F"/>
+                </svg>
+            </div>
+        </div>
     </div>
-    <div class="app__setting_up_alert__right">
-      <div class="app__setting_up_alert__ico_info">
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-          <circle cx="9.36507" cy="9.07717" r="8.07717" stroke="#57458F" stroke-width="2"/>
-          <path d="M8.2879 8C8.2879 7.44772 8.73562 7 9.2879 7C9.84019 7 10.2879 7.44771 10.2879 8L10.2879 13C10.2879 13.5523 9.8402 14 9.28791 14C8.73563 14 8.28791 13.5523 8.28791 13L8.2879 8Z" fill="#57458F"/>
-          <path d="M10.2879 5C10.2879 5.55228 9.84019 6 9.2879 6C8.73562 6 8.2879 5.55228 8.2879 5C8.2879 4.44772 8.73562 4 9.2879 4C9.84019 4 10.2879 4.44772 10.2879 5Z" fill="#57458F"/>
-        </svg>
-      </div>
+    <!-- device.status == '1B' or device.status == '1Z' or device.status == 'IN' -->
+    <div class="app__setting_up_alert">
+        <div class="app__setting_up_alert__left">
+            <span class="app__setting_up_alert__title">Oh snap. Your device got ineligible status</span>
+            <p>Apple&rsquo;s new policies temporarily disabled your device&rsquo;s ability to&nbsp;download apps via any sideloading services. <a href="">This article</a> provides additional information about the situation.</p>
+            <p>Unfortunately, we&nbsp;cannot influence the re-activation process, since this is&nbsp;solely managed by&nbsp;Apple Inc. The only small sweet thing we&nbsp;can do&nbsp;for you is&nbsp;to&nbsp;offer a&nbsp;promocode for another device. Feel free&nbsp;to <a href="">contact us</a> if&nbsp;you need one.</p>
+        </div>
+        <div class="app__setting_up_alert__right">
+            <div class="app__setting_up_alert__ico_info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <circle cx="9.36507" cy="9.07717" r="8.07717" stroke="#57458F" stroke-width="2"/>
+                    <path d="M8.2879 8C8.2879 7.44772 8.73562 7 9.2879 7C9.84019 7 10.2879 7.44771 10.2879 8L10.2879 13C10.2879 13.5523 9.8402 14 9.28791 14C8.73563 14 8.28791 13.5523 8.28791 13L8.2879 8Z" fill="#57458F"/>
+                    <path d="M10.2879 5C10.2879 5.55228 9.84019 6 9.2879 6C8.73562 6 8.2879 5.55228 8.2879 5C8.2879 4.44772 8.73562 4 9.2879 4C9.84019 4 10.2879 4.44772 10.2879 5Z" fill="#57458F"/>
+                </svg>
+            </div>
+        </div>
     </div>
-  </div>
-  <!-- device.status == '1B' or device.status == '1Z' or device.status == 'IN' -->
-  <div id="app__setting_up_alert">
-    <div class="app__setting_up_alert__left">
-      <span class="app__setting_up_alert__title">Oh snap. Your device got ineligible status</span>
-      <p>Apple’s new policies temporarily disabled your device’s ability to download apps via any sideloading services. <a href="">This article</a> provides additional information about the situation.</p>
-      <p>Unfortunately, we cannot influence the re-activation process, since this is solely managed by Apple Inc. The only small sweet thing we can do for you is to offer a promocode for another device. Feel free to <a href="">contact us</a> if you need one.</p>
-    </div>
-    <div class="app__setting_up_alert__right">
-      <div class="app__setting_up_alert__ico_info">
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-          <circle cx="9.36507" cy="9.07717" r="8.07717" stroke="#57458F" stroke-width="2"/>
-          <path d="M8.2879 8C8.2879 7.44772 8.73562 7 9.2879 7C9.84019 7 10.2879 7.44771 10.2879 8L10.2879 13C10.2879 13.5523 9.8402 14 9.28791 14C8.73563 14 8.28791 13.5523 8.28791 13L8.2879 8Z" fill="#57458F"/>
-          <path d="M10.2879 5C10.2879 5.55228 9.84019 6 9.2879 6C8.73562 6 8.2879 5.55228 8.2879 5C8.2879 4.44772 8.73562 4 9.2879 4C9.84019 4 10.2879 4.44772 10.2879 5Z" fill="#57458F"/>
-        </svg>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>
