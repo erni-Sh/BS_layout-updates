@@ -5,12 +5,17 @@
 .twitterBanner {
     opacity: 0;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     width: 100%;
+    margin: 20px 0;
     min-height: 73px;
     border-radius: 16px;
     overflow: hidden;
+    -webkit-transition: .4s ease all;
+    -o-transition: .4s ease all;
     transition: .4s ease all;
 }
 
@@ -29,6 +34,7 @@
 }
 
 .twitterBanner_visible:before {
+    -webkit-animation: twitterBannerBG 1.2s linear forwards;
     animation: twitterBannerBG 1.2s linear forwards;
 }
 
@@ -37,8 +43,12 @@
     font-size: 20px;
     font-weight: 900;
     color: #00ACEE;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /*justify-content: center;*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 35px 0 20px;
 }
@@ -49,6 +59,7 @@
 }
 
 .twitterBanner_visible .twitterBanner__left span {
+    -webkit-animation: twitterBannerRightText 1.2s linear forwards;
     animation: twitterBannerRightText 1.2s linear forwards;
 }
 
@@ -57,9 +68,17 @@
     /*background: #00ACEE;*/
     color: white;
     min-width: 277px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none! important;
 }
 
 .twitterBanner__right__text {
@@ -79,13 +98,20 @@
 }
 
 .twitterBanner_visible .twitterBanner__right:before {
+    -webkit-animation: twitterBannerRightBG 1.2s linear forwards;
     animation: twitterBannerRightBG 1.2s linear forwards;
 }
 
 .twitterBanner__icon {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 45px;
     height: 45px;
@@ -95,6 +121,7 @@
 }
 
 .twitterBanner_visible .twitterBanner__icon {
+    -webkit-animation: twitterBannerIcon 1.2s linear forwards;
     animation: twitterBannerIcon 1.2s linear forwards;
 }
 
@@ -106,6 +133,9 @@
 
 @media screen and (max-width: 581px) {
     .twitterBanner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .twitterBanner__left {
@@ -121,6 +151,8 @@
         width: 28px;
         background: none;
         position: relative;
+        -webkit-transform: none;
+        -ms-transform: none;
         transform: none;
         left: 0;
         margin-right: 1em;
@@ -130,9 +162,20 @@
     }
 }
 
+@-webkit-keyframes twitterBannerBG {
+    0% {right: 100%;}
+    25% {right: 0;}
+}
+
 @keyframes twitterBannerBG {
     0% {right: 100%;}
     25% {right: 0;}
+}
+
+@-webkit-keyframes twitterBannerRightText {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
 }
 
 @keyframes twitterBannerRightText {
@@ -141,14 +184,26 @@
     50% {opacity: 1;}
 }
 
+@-webkit-keyframes twitterBannerRightBG {
+    0% {left: 100%;}
+    50% {left: 100%;}
+    75% {left: 0;}
+}
+
 @keyframes twitterBannerRightBG {
     0% {left: 100%;}
     50% {left: 100%;}
     75% {left: 0;}
 }
 
+@-webkit-keyframes twitterBannerIcon {
+    0% {-webkit-transform: rotateY(90deg);transform: rotateY(90deg);}
+    75% {-webkit-transform: rotateY(90deg);transform: rotateY(90deg);}
+    100% {-webkit-transform: rotateY(0);transform: rotateY(0);}
+}
+
 @keyframes twitterBannerIcon {
-    0% {transform: rotateY(90deg);}
-    75% {transform: rotateY(90deg);}
-    100% {transform: rotateY(0);}
+    0% {-webkit-transform: rotateY(90deg);transform: rotateY(90deg);}
+    75% {-webkit-transform: rotateY(90deg);transform: rotateY(90deg);}
+    100% {-webkit-transform: rotateY(0);transform: rotateY(0);}
 }
