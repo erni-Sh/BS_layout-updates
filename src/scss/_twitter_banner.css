@@ -10,7 +10,7 @@
     display: flex;
 
     width: 100%;
-    margin: 20px 0;
+    margin: 28px 0;
     min-height: 73px;
     border-radius: 16px;
     overflow: hidden;
@@ -66,7 +66,7 @@
 .twitterBanner__right {
     position: relative;
     /*background: #00ACEE;*/
-    color: white;
+    color: white !important;
     min-width: 277px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -85,6 +85,11 @@
     font-size: 16px;
     font-weight: 900;
     z-index: 2;
+    transition: .4s ease all;
+}
+
+.twitterBanner__right:hover .twitterBanner__right__text {
+    transform: scale(1.03);
 }
 
 .twitterBanner__right:before {
@@ -128,6 +133,9 @@
 @media screen and (max-width: 991px) {
     .twitterBanner__left span:nth-child(1) {
         display: none;
+    }
+    .twitterBanner__left span:nth-child(2) {
+        width: 100%;
     }
 }
 
