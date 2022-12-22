@@ -1,0 +1,118 @@
+extends ./includes/tmpl.pug
+
+block main
+    section#landing-header.section.section-relative
+        //.section-holder-border.item-block.item-absolute
+        //.section-holder-overlay.item-block.item-absolute
+        .section-block.section-relative
+            //.landing-header__background
+            //    include ../assets/XMAS_top_BG.svg
+            .landing-header__background(style='background-image: url(/assets/soul_landing/XMAS_top_BG.svg)')
+            .landing-header__snow__layerOne(style='background-image: url(/assets/soul_landing/snow2.png)')
+            .landing-header__snow__layerTwo(style='background-image: url(/assets/soul_landing/snow1.png)')
+            .section-inner.section-fit.section-relative
+                #landing-header__logo.widget.item-absolute
+                    .contents.cropped.item-block
+                        img.item-content-box.item-block(alt='' src='https://s3.amazonaws.com/cdn.builds.io/newstatic/assets/soul_landing/logo.png')
+                #landing-header__logo__title.widget.item-absolute
+                    .contents.cropped.item-block
+                        img.item-content-box.item-block(alt='' src='https://s3.amazonaws.com/cdn.builds.io/newstatic/assets/soul_landing/buildstore-title.svg')
+
+                #landing-header__title.widget.item-absolute.headline.xmasTitle
+                    h1 Merry Jolly Christmas
+
+                #landing-header__descr.widget.item-absolute.headline
+                    .contents
+                        h1
+                            p.x_9a9d3d17
+                                span.x_736e2a90
+                                    | Hello again! Just follow the steps below and may the stars align in&nbsp;your favor
+
+                #landing-header__button.widget.item-absolute.landing__signup-btn
+                    button.xmasButton
+                        span SPIN THE WHEEL
+                    //a.url-link.btn.item-block(href='/accounts/register/' onclick="fbq('track', 'user_tap_sign_up_button')")
+                    //    | SPIN THE WHEEL
+
+            .landing-header__roulette
+                .landing-header__tree
+                    include ../assets/XMAS_tree.svg
+                .landing-header__drum
+                    include ../assets/XMAS_drum.svg
+                .landing-header__drum-pointer
+                    include ../assets/XMAS_pointer.svg
+                //.landing-header__cracker__backup
+                //    img(src='/assets/soul_landing/XMAS_top_cracker.svg' alt='background')
+                .landing-header__cracker
+                    include ../assets/XMAS_cracker.svg
+                .landing-header__left_snowflake
+                    include ../assets/XMAS_left-snowflake.svg
+                .landing-header__tile
+                    include ../assets/XMAS_tile.svg
+                .landing-header__right_snowflake
+                    include ../assets/XMAS_right_snowflake.svg
+
+            //img.landing-header__background__bottom(src='/assets/soul_landing/XMAS_top_BG_bottom.svg' alt='background')
+            //.landing-header__background__bottom(style="background-image: url('/assets/soul_landing/XMAS_top_BG_bottom.svg')")
+            .landing-header__background__bottom
+                include ../assets/XMAS_top_BG_bottom.svg
+
+    section.xmasSteps
+        .container
+            .xmasSteps__inner
+                .xmasSteps__step
+                    .xmasSteps__step__icon
+                        include ../assets/icon_step1.svg
+                    .xmasSteps__step__title Step 1
+                    .xmasSteps__step__descr
+                        | Spin the wheel of fortune
+                .xmasSteps__step
+                    .xmasSteps__step__icon
+                        include ../assets/icon_step2.svg
+                    .xmasSteps__step__title Step 2
+                    .xmasSteps__step__descr
+                        | Visit us on&nbsp;
+                        a(href='#!') Facebook
+                        |  or&nbsp;
+                        a(href='#!') Twitter
+                .xmasSteps__step
+                    .xmasSteps__step__icon
+                        include ../assets/icon_step3.svg
+                    .xmasSteps__step__title Step 3
+                    .xmasSteps__step__descr
+                        | Tag&nbsp;
+                        span @BuildStore&nbsp;
+                        | and share your promo code with your friends
+
+    section.xmasFooter
+        .xmasFooter__top(style="background-image: url('/assets/soul_landing/XMAS_fotter_BG.svg')")
+            .xmasFooter__top__title.xmasTitle
+                | Get ready to celebrate a&nbsp;Merry Jolly Christmas!
+            .xmasFooter__top__button
+                button.xmasButton
+                    span SPIN THE WHEEL
+            .xmasFooter__top__smalltext
+                | *Please, note that this promocode gives a discount for the 1st month only and is only available for the next five days
+        .xmasFooter__bottom
+            .container
+                .xmasFooter__bottom__inner
+                    a.xmasFooter__bottom__logo(href="#!")
+                        img.xmasFooter__bottom__logo__icon(alt='' src='https://s3.amazonaws.com/cdn.builds.io/newstatic/assets/soul_landing/logo.png')
+                        img.xmasFooter__bottom__logo__title(alt='' src='https://s3.amazonaws.com/cdn.builds.io/newstatic/assets/soul_landing/buildstore-title.svg')
+
+    section.xmasModal__wrapper
+        .xmasModal__inner
+            .xmasModal__background
+                include ../assets/XMAS_popup.svg
+            .xmasModal__title
+                | 20% OFF
+            .xmasModal__promocode
+                span NAUGHTY10
+                .xmasModal__promocode__icon
+                    include ../assets/icon_copy.svg
+            .xmasModal__button
+                button.xmasButton
+                    span USE PROMOCODE
+
+
+

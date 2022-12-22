@@ -14,6 +14,7 @@ const PAGES_PUG = fs.readdirSync(PAGES_PUG_DIR).filter(fileName => fileName.ends
 
 const PAGES_HTML_DIR = path.resolve(__dirname, 'src/html');
 const PAGES_HTML = fs.readdirSync(PAGES_HTML_DIR).filter(fileName => fileName.endsWith('.html'));
+const SCSS_DIR = path.resolve(__dirname, 'src/scss');
 
 const devServer = (isDev) => !isDev ? {} : {
   devServer: {
@@ -51,7 +52,7 @@ module.exports = ({develop}) => ({
     //     template: './src/index.html'
     // }),
     new MiniCssExtractPlugin({
-        filename: './scss/main.css'
+        filename: './styles/main.css',
     })
   ],
   module: {
@@ -76,7 +77,13 @@ module.exports = ({develop}) => ({
           {
             test: /\.css$/i,
             use: [
-              MiniCssExtractPlugin.loader, 'css-loader'
+              MiniCssExtractPlugin.loader,
+              {
+                loader: "css-loader",
+                options: {
+                  sourceMap: true,
+                },
+              },
             ]
           },
           {
@@ -95,7 +102,7 @@ module.exports = ({develop}) => ({
                   sourceMap: true,
                 },
               },
-            ]
+            ],
           },
           {
             test: /\.pug$/,
