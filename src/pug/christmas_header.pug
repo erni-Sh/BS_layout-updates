@@ -1,0 +1,36 @@
+extends ./includes/tmpl.pug
+
+block main
+    section#landing-header.section.section-relative.mainLanding-header
+        .section-holder-border.item-block.item-absolute
+        .section-holder-overlay.item-block.item-absolute
+        .section-block.section-relative
+            .landing-header__background(style='background-image: url(/assets/christmas_landing/XMAS_top_BG.svg)')
+            .landing-header__snow__layerOne(style='background-image: url(/assets/christmas_landing/snow2.png)')
+            .landing-header__snow__layerTwo(style='background-image: url(/assets/christmas_landing/snow1.png)')
+            .landing-header__roulette
+                .landing-header__tree
+                    include ../assets/XMAS_tree.svg
+                .landing-header__drum
+                    include ../assets/XMAS_drum.svg
+                .landing-header__cracker
+                    include ../assets/XMAS_cracker.svg
+                .landing-header__left_snowflake
+                    include ../assets/XMAS_left-snowflake.svg
+                .landing-header__tile
+                    include ../assets/XMAS_tile.svg
+                .landing-header__right_snowflake
+                    include ../assets/XMAS_right_snowflake.svg
+
+            .mainLanding-header__left.xmasContainer
+                .mainLanding-header__title.xmasTitle
+                    h1 Merry Jolly Christmas
+                .mainLanding-header__descr
+                    p Deck the Halls. Sideload, Play and be&nbsp;Merry!
+                a(href='/christmas2022/').mainLanding-header__buttonTop
+                    | Test your luck
+                a(href='/accounts/register/' onclick="fbq('track', 'user_tap_sign_up_button')").mainLanding-header__buttonBottom
+                    | Sign up now
+            .landing-header__background__bottom
+                include ../assets/XMAS_top_BG_bottom.svg
+

@@ -106,7 +106,7 @@ module.exports = ({develop}) => ({
           },
           {
             test: /\.pug$/,
-            loader: 'pug-loader'
+            loader: 'pug-loader',
           }
       ]
   },

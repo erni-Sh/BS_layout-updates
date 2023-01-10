@@ -144,4 +144,6 @@ dist
 .idea
 .DS_Store
 materials
+notes.txt
+
 # End of https://www.toptal.com/developers/gitignore/api/node
